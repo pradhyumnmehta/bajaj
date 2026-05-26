@@ -15,7 +15,7 @@ import java.util.Map;
  * GET /health  →  200 OK
  */
 @RestController
-@RequestMapping("/health")
+@RequestMapping("/health-check")
 public class HealthController {
 
     @GetMapping
