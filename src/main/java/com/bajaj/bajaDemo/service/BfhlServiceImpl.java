@@ -1,5 +1,6 @@
 package com.bajaj.bajaDemo.service;
 
+import com.bajaj.bajaDemo.config.UserConstants;
 import com.bajaj.bajaDemo.dto.BfhlRequest;
 import com.bajaj.bajaDemo.dto.BfhlResponse;
 import org.springframework.stereotype.Service;
@@ -24,10 +25,10 @@ import java.util.List;
 @Service
 public class BfhlServiceImpl implements BfhlService {
 
-    // ---- Hardcoded user details (replace with your own) ----
-    private static final String USER_ID     = "pradhyumn_mehta_29092005";
-    private static final String EMAIL       = "pradhyumnmehta231355@acropolis.in";
-    private static final String ROLL_NUMBER = "0827RL231050";
+    // ---- User details pulled from central UserConstants ----
+    private static final String USER_ID     = UserConstants.USER_ID;
+    private static final String EMAIL       = UserConstants.EMAIL;
+    private static final String ROLL_NUMBER = UserConstants.ROLL_NUMBER;
 
     @Override
     public BfhlResponse process(BfhlRequest request) {
