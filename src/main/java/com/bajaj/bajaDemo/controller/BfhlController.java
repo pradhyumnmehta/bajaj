@@ -14,12 +14,23 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/bfhl")
+@CrossOrigin(origins = "*")
 public class BfhlController {
 
     private final BfhlService bfhlService;
 
     public BfhlController(BfhlService bfhlService) {
         this.bfhlService = bfhlService;
+    }
+
+    /**
+     * GET /bfhl
+     * Returns a hardcoded operation code to confirm the endpoint is live.
+     * Expected response: { "operation_code": 1 }
+     */
+    @GetMapping
+    public ResponseEntity<Map<String, Object>> handleGet() {
+        return ResponseEntity.ok(Map.of("operation_code", 1));
     }
 
     /**
