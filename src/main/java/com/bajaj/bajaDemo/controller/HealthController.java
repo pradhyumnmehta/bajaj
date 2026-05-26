@@ -13,7 +13,7 @@ import java.util.Map;
  * GET /health  →  200 OK  { "status": "UP", "timestamp": "..." }
  */
 @RestController
-@RequestMapping("/health")
+@RequestMapping("/health-check")
 public class HealthController {
 
     @GetMapping
